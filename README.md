@@ -1,7 +1,7 @@
 #
 <h1 align="center">C++ Practice</h1>
 <p align="center">
- <img height=200px src="./images/c++.png" alt="Initializer">
+ <img height=200px src="./Images/c++.png" alt="c++ image">
 </p>
 This is a collection of practice problems and solutions in C++ programming language. Each problem comes with a description and a solution in C++.
 
