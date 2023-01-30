@@ -61,7 +61,7 @@ void Vec::print(){
 }
 ```
 The memory was allocated twice, but never freed.
-
+To solve this we need to implement the Destructor:
 ```cpp
 class Vec{
     .
@@ -69,6 +69,7 @@ class Vec{
     .
 
     public:
+    // Destructor
     ~Vec();
 
     .
@@ -85,6 +86,7 @@ Then we need to implement it, in my situation im going to implement it out of th
 .
 .
 
+// Destructor Implementation
 Vec::~Vec(){
     if(!p){
         delete[] p;

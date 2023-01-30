@@ -78,6 +78,7 @@ class Vec{
     .
 
     public:
+    // Copy Constructor
     Vec(Vec& vec);
 
     .
@@ -94,6 +95,7 @@ Then we need to implement it, in my situation im going to implement it out of th
 .
 .
 
+// Copy Constructor Implementation
 Vec::Vec(Vec& vec):len(vec.len) , p(new int[vec.len]){
 
     for(int i = 0 ; i<len ; i++){
