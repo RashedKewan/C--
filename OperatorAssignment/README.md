@@ -12,7 +12,9 @@ int main(int argc , const char * argv[] ){
         a[i] = 1;
     }
     
-    Vec b = a;
+    Vec b ;
+    b = a;
+    
     a.print();
     b.print();
 
@@ -73,7 +75,7 @@ We are back to the same problem, why?
 
 Because now command:
 
-a = b; 
+> a = b; 
 
 is running the Assignment operator and not Constructor Copy
 Because object b already exists.

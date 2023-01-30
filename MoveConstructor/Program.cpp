@@ -1,5 +1,4 @@
-// why do we need a copy constructor?
-// suppose we have this situation
+
 #include <iostream>
 using namespace std;
 
@@ -17,24 +16,33 @@ class Vec{
     int& operator [] (int i ){
         return p[i];
     }
-    
+
     void operator = (Vec& vec){
-        if(this == &vec){
+        if(this == &vec)
             return;
-        }
         if(len != vec.len){
             delete[] p;
             len = vec.len;
-            p = new int[len];
+            p = new int [len];
         }
-        for (size_t i = 0; i < len; i++)
-        {
-            p[i]=vec[i];
+        for(int i=0 ; i<len ; i++){
+            p[i] = vec[i];
         }
         cout << "Assignment Operator" << endl;
     }
-   
+
+    Vec operator + (Vec& vec){
+        if(len != vec.len){
+            return *this;       
+        }
+        Vec ret(len);
+        for(int i=0 ; i<len ; i++){
+            ret[i] = p[i] + vec[i];
+        }
+        return ret;
+    }
 };
+
 Vec::~Vec(){
     if(!p){
         delete[] p;
@@ -42,6 +50,7 @@ Vec::~Vec(){
     cout << "destructor" << endl;
 }
 Vec::Vec(): p(nullptr) ,len(0){}
+
 Vec::Vec(Vec& vec):len(vec.len) , p(new int[vec.len]){
 
     for(int i = 0 ; i<len ; i++){
@@ -49,6 +58,7 @@ Vec::Vec(Vec& vec):len(vec.len) , p(new int[vec.len]){
     }
     cout << "Copy Constructor" << endl;
 }
+
 Vec::Vec(int length): len(length),p(new int[length]){
     cout << "constructor" << endl;
 }
@@ -61,23 +71,26 @@ void Vec::print(){
 
 
 ///////////     MAIN     /////////////
-int main(int argc , const char * argv[] ){
-    int n = 5;
-    Vec a(n);
-    for (size_t i = 0; i < n; i++)
-    {
-        a[i] = 1;
-    }
+// int main(int argc , const char * argv[] ){
+//     int n = 5;
+//     Vec a(n) , b(n) , c(n);
+//     for (size_t i = 0; i < n; i++)
+//     {
+//         a[i] = 1;
+//         b[i] = i;
+//         c[i] = 2*i;
+//     }
     
-    Vec b ;
-    b = a;
-    a.print();
-    b.print();
-
-    b[3] = 10;
     
-    a.print();
-    b.print();
+//     // Vec d = a + ( b + (c + a));
+//     Vec temp1 = c + a;
+//     Vec temp2 = b + temp1;
+//     Vec d = a + temp2;
 
-    return 0;
-}
+//     a.print();
+//     b.print();
+//     c.print();
+//     d.print();
+
+//     return 0;
+// }
