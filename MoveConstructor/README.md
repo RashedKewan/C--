@@ -99,9 +99,9 @@ void Vec::print(){
 ```
 Note that this program is not even compiled, because in the line :
 
-> vec  tmp1 = a + c  
+> vec  temp1 = a + c  
 
-we build a tmp1 object by rvalue
+we build a temp1 object by rvalue
 And we haven't defined the Constructor Move.
 Define Constructor Move naively (like Constructor Copy):
 
@@ -188,8 +188,7 @@ We will optimize the code:
 .
 
 // Move Constructor Implementation
-Vec::Vec(Vec&& vec): len(vec.len) , p(new int[vec.len]){
-    p = vec.p;
+Vec::Vec(Vec&& vec): len(vec.len) , p(vec.p){
     vec.p = nullptr;
     cout << "Move Constructor" << endl ;
 }

@@ -89,7 +89,7 @@ class Vec{
     .
 
     public:
-    Vec& operator = (Vec& vec){
+    void operator = (Vec& vec){
         if(this == &vec){
             return;
         }
