@@ -82,7 +82,8 @@ Vec::Vec(Vec& vec):len(vec.len) , p(new int[vec.len]){
 
 // Optimized Move Constructor Implementation
 
-Vec::Vec(Vec&& vec) :len(move(vec.len)) , p(exchange(vec.p,nullptr)){
+Vec::Vec(Vec&& vec) :len(move(vec.len)) , p(vec.p){
+    vec.p = nullptr;
     cout << "Move Constructor" << endl ;
 }
 
