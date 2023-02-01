@@ -1,4 +1,7 @@
-# Operators and friend functions
+#
+<h1 align="center">Operators & Friend Functions</h1>
+
+
 A **friend function** (operator) is a function that is defined in a class but does not belong to it.
 It is not a class method, however it has access to all fields and methods of a class.
 

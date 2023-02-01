@@ -1,4 +1,6 @@
-# Lambda
+#
+<h1 align="center"> Lambda</h1>
+
 Syntax of lambda expression in C++:
 
  [ **list of closure vareables** ]( **list of arguments** ) -> Return_Type { **Body** }

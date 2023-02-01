@@ -1,4 +1,7 @@
-# *Change Property Value  in Const Class*
+#
+<h1 align="center">Const Class</h1>
+
+## *Change Property Value  in Const Class*
 To enable changing property value  in const class we need to add mutable before the property.
 Suppose we have the following main:
 ```cpp

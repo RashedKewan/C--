@@ -1,4 +1,8 @@
-# *Why Do We Need Copy Constructor*
+#
+<h1 align="center">Copy Constructor</h1>
+
+## *Why Do We Need Copy Constructor* ?
+
 Suppose we have the following main:
 ```cpp
 #include <iostream>

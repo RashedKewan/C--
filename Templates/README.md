@@ -1,8 +1,10 @@
-# Templates of functions.
+
+#
+<h1 align="center">Templates of Functions</h1>
 
 Let's look at the following problem: we need to implement function:
 > *F(x) = x<sup>2</sup>*
-* 
+
 
 which knows how to work with x of type double and with x of type int.
 
@@ -199,7 +201,7 @@ and restores their composition:
 
 ```cpp
 /*
-args : two functions that each one take an arg of type T and return value of type T.
+args : two functions that each one takes an arg of type T and return value of type T.
 
 returns:  a function that takes variable of type T the apply the compostion on it.
 */ 

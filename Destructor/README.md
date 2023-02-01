@@ -1,4 +1,7 @@
-# *Why Do We Need Destructor*
+#
+<h1 align="center"> Destructor</h1>
+
+## *Why Do We Need Destructor* ?
 Suppose we have the following main:
 ```cpp
 #include <iostream>
