@@ -19,7 +19,7 @@ class Complex : public Point{
 public : 
     Complex(): Point(){}
     Complex(int x_, int y_): Point(x_ ,y_){}
-    void show(){
+    void show() override{
         cout << x << " + "<< "i" << y << endl;
     }
 };
